@@ -1,4 +1,4 @@
-const downloader = require('electron-download-fork');
+const downloader = require('electron-download');
 const unzip = require('unzip');
 const os = require('os');
 const fs = require('fs');
@@ -63,7 +63,7 @@ module.exports = (options, cb) => {
 		  .pipe(unzip.Parse())
 		  .on('entry', entry => {
 			const fileName = path.basename(entry.path);
-			const type = entry.type; // 'Directory' or 'File' 
+			const type = entry.type; // 'Directory' or 'File'
 			if (type == 'File' && fileName.match(targetFilePattern)) {
 				// only put the specific files into our target dir
 				targetFiles.push(fileName)
