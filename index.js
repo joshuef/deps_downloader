@@ -1,3 +1,4 @@
+// const downloader = require('electron-download-fork');
 const downloader = require('electron-download');
 const unzip = require('unzip');
 const os = require('os');
@@ -50,11 +51,14 @@ module.exports = (options, cb) => {
 	}, options);
 
 	const prefix = opts.filename;
-	const filename = prefix + "-" + opts.version + "-" + opts.platform + "-" + opts.arch + '.zip';
+	const filename = prefix + "-v" + opts.version + "-" + opts.platform + "-" + opts.arch + '.zip';
 	const targetFilePattern = new RegExp(options.filePattern || '^(' + prefix + '|(lib)' + prefix +'.*\.(dll|so|dylib))$');
 
 	opts.customFilename = filename;
+	opts.customDir = '/';
+	opts.cache = path.resolve('./lib_zips' );
 
+	console.log('got opts in deps dl, to pas', opts)
 	return downloader(opts, (err, zipPath) => {
 		checkError(err);
 		let targetFiles = [];
