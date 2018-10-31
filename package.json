@@ -1,6 +1,6 @@
 {
   "name": "deps_downloader",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Download libs for your platform and unpack them automatically on install",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "async": "^2.1.5",
-    "electron-download": "4.1.1",
-    "electron-download-fork": "https://s3.eu-west-2.amazonaws.com/electron-download-fork/electron-download-fork-4.1.0.tgz",
+    "electron-download": "git+https://github.com/joshuef/electron-download#SafeUrlsAcceptedHere",
     "extend": "^3.0.0",
     "minimalist": "^1.0.0",
     "unzip": "^0.1.11"
