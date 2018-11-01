@@ -58,7 +58,7 @@ module.exports = (options, cb) => {
 	opts.customDir = '/';
 	opts.cache = path.resolve('./lib_zips' );
 
-	console.log('got opts in deps dl, to pas', opts)
+	console.log('got opts in deps dl, to passsss', opts)
 	return downloader(opts, (err, zipPath) => {
 		checkError(err);
 		let targetFiles = [];
