@@ -54,10 +54,12 @@ module.exports = (options, cb) => {
 	const filename = prefix + "-" + opts.version + "-" + opts.platform + "-" + opts.arch + '.zip';
 	const targetFilePattern = new RegExp(options.filePattern || '^(' + prefix + '|(lib)' + prefix +'.*\.(dll|so|dylib))$');
 
+
 	opts.customFilename = filename;
 	opts.customDir = '/';
 	opts.avoidMiddleUrl = true;
 	opts.cache = path.resolve('./lib_zips' );
+	console.log('opts being passed innnnn', opts)
 
 	return downloader(opts, (err, zipPath) => {
 		checkError(err);
