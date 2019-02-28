@@ -56,6 +56,7 @@ module.exports = (options, cb) => {
 
 	opts.customFilename = filename;
 	opts.customDir = '/';
+	opts.avoidMiddleUrl = true;
 	opts.cache = path.resolve('./lib_zips' );
 
 	return downloader(opts, (err, zipPath) => {
