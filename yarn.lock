@@ -176,9 +176,10 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-"electron-download@git+https://github.com/joshuef/electron-download#ForSafe":
+electron-download@^4.1.1:
   version "4.1.1"
-  resolved "git+https://github.com/joshuef/electron-download#b5ffcff26618010b7d78a29d3c800ddb41203dfe"
+  resolved "https://registry.yarnpkg.com/electron-download/-/electron-download-4.1.1.tgz#02e69556705cc456e520f9e035556ed5a015ebe8"
+  integrity sha512-FjEWG9Jb/ppK/2zToP+U5dds114fM1ZOJqMAR4aXXL5CvyPE9fiqBK/9YcwC9poIFQTEJk/EM/zyRwziziRZrg==
   dependencies:
     debug "^3.0.0"
     env-paths "^1.0.0"
